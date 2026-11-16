@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the latest movies, popular films, and timeless favorites on 123moviies. Browse by genre and find your next movie.">
+  <meta name="theme-color" content="#090b12">
+  <title>Movies | 123moviies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#" aria-label="123moviies home"><span class="brand-mark">123</span><span>moviies<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#">Home</a><a class="active" href="#movies">Movies</a><a href="#genres">Genres</a><a href="#footer">About</a>
+      </nav>
+      <a class="nav-cta" href="#movies">Explore Movies <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR MOVIE DESTINATION</div>
+        <h1>Find your next<br><span>favorite movie.</span></h1>
+        <p>Explore movies across every genre, discover popular titles, and find something worth watching tonight.</p>
+        <a class="hero-button" href="#movies">Browse Movies <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="poster-stack">
+          <div class="poster poster-back"><span>THE<br>UNKNOWN</span></div>
+          <div class="poster poster-mid"><span>AFTER<br>THE SUN</span></div>
+          <div class="poster poster-front"><span class="poster-kicker">A STORY BEGINS</span><strong>BEYOND<br>THE<br>STARS</strong><span class="poster-year">2026 · ADVENTURE</span></div>
+        </div>
+        <div class="floating-note"><span class="note-star">✦</span><span><b>Discover more</b><small>Stories worth your time</small></span></div>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <section class="catalog-section" id="movies">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> THE COLLECTION</div><h2>Explore <span>Movies</span></h2><p class="section-subtitle">A handpicked collection of stories for every mood.</p></div>
+        <div class="catalog-count"><strong id="resultCount">12</strong><span>titles to explore</span></div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-box"><span class="search-icon">⌕</span><input id="movieSearch" type="search" placeholder="Search movies..." aria-label="Search movies"><kbd>⌕</kbd></div>
+        <div class="sort-wrap"><label for="sortSelect">Sort by</label><select id="sortSelect"><option value="featured">Featured</option><option value="title">Title A–Z</option><option value="year">Newest first</option></select></div>
+      </div>
+
+      <div class="genre-row" id="genres" aria-label="Filter by genre">
+        <button class="genre-chip active" data-genre="All">All Movies</button>
+        <button class="genre-chip" data-genre="Action">Action</button>
+        <button class="genre-chip" data-genre="Adventure">Adventure</button>
+        <button class="genre-chip" data-genre="Drama">Drama</button>
+        <button class="genre-chip" data-genre="Comedy">Comedy</button>
+        <button class="genre-chip" data-genre="Sci-Fi">Sci-Fi</button>
+        <button class="genre-chip" data-genre="Thriller">Thriller</button>
+      </div>
+
+      <div class="movie-grid" id="movieGrid" aria-live="polite">
+        <article class="movie-card" data-title="The Last Horizon" data-genre="Adventure" data-year="2026"><div class="movie-poster art-one"><span class="poster-label">FEATURED</span><span class="art-title">THE LAST<br>HORIZON</span><span class="art-foot">A JOURNEY BEYOND</span></div><div class="movie-info"><div><h3>The Last Horizon</h3><p>Adventure · 2026</p></div><span class="rating">★ 8.4</span></div></article>
+        <article class="movie-card" data-title="Neon Shadows" data-genre="Thriller" data-year="2025"><div class="movie-poster art-two"><span class="art-title">NEON<br>SHADOWS</span><span class="art-foot">EVERY SECRET HAS A PRICE</span></div><div class="movie-info"><div><h3>Neon Shadows</h3><p>Thriller · 2025</p></div><span class="rating">★ 7.9</span></div></article>
+        <article class="movie-card" data-title="Beyond the Stars" data-genre="Sci-Fi" data-year="2026"><div class="movie-poster art-three"><span class="art-title">BEYOND<br>THE STARS</span><span class="art-foot">THE UNIVERSE IS WAITING</span></div><div class="movie-info"><div><h3>Beyond the Stars</h3><p>Sci-Fi · 2026</p></div><span class="rating">★ 8.7</span></div></article>
+        <article class="movie-card" data-title="One More Summer" data-genre="Drama" data-year="2024"><div class="movie-poster art-four"><span class="art-title">ONE MORE<br>SUMMER</span><span class="art-foot">SOME MOMENTS LAST FOREVER</span></div><div class="movie-info"><div><h3>One More Summer</h3><p>Drama · 2024</p></div><span class="rating">★ 7.6</span></div></article>
+        <article class="movie-card" data-title="City of Echoes" data-genre="Action" data-year="2025"><div class="movie-poster art-five"><span class="art-title">CITY OF<br>ECHOES</span><span class="art-foot">THE CITY NEVER FORGETS</span></div><div class="movie-info"><div><h3>City of Echoes</h3><p>Action · 2025</p></div><span class="rating">★ 8.1</span></div></article>
+        <article class="movie-card" data-title="The Funny Side" data-genre="Comedy" data-year="2023"><div class="movie-poster art-six"><span class="art-title">THE FUNNY<br>SIDE</span><span class="art-foot">LAUGH A LITTLE LOUDER</span></div><div class="movie-info"><div><h3>The Funny Side</h3><p>Comedy · 2023</p></div><span class="rating">★ 7.3</span></div></article>
+        <article class="movie-card" data-title="Midnight Run" data-genre="Action" data-year="2026"><div class="movie-poster art-seven"><span class="art-title">MIDNIGHT<br>RUN</span><span class="art-foot">NO TURNING BACK</span></div><div class="movie-info"><div><h3>Midnight Run</h3><p>Action · 2026</p></div><span class="rating">★ 8.0</span></div></article>
+        <article class="movie-card" data-title="Wild Frontier" data-genre="Adventure" data-year="2024"><div class="movie-poster art-eight"><span class="art-title">WILD<br>FRONTIER</span><span class="art-foot">INTO THE UNKNOWN</span></div><div class="movie-info"><div><h3>Wild Frontier</h3><p>Adventure · 2024</p></div><span class="rating">★ 7.8</span></div></article>
+        <article class="movie-card" data-title="Silent Signal" data-genre="Thriller" data-year="2025"><div class="movie-poster art-nine"><span class="art-title">SILENT<br>SIGNAL</span><span class="art-foot">CAN YOU HEAR THE TRUTH?</span></div><div class="movie-info"><div><h3>Silent Signal</h3><p>Thriller · 2025</p></div><span class="rating">★ 8.2</span></div></article>
+        <article class="movie-card" data-title="Paper Hearts" data-genre="Drama" data-year="2023"><div class="movie-poster art-ten"><span class="art-title">PAPER<br>HEARTS</span><span class="art-foot">A LOVE WORTH REMEMBERING</span></div><div class="movie-info"><div><h3>Paper Hearts</h3><p>Drama · 2023</p></div><span class="rating">★ 7.5</span></div></article>
+        <article class="movie-card" data-title="Orbit 9" data-genre="Sci-Fi" data-year="2024"><div class="movie-poster art-eleven"><span class="art-title">ORBIT<br>9</span><span class="art-foot">LOST IN A NEW WORLD</span></div><div class="movie-info"><div><h3>Orbit 9</h3><p>Sci-Fi · 2024</p></div><span class="rating">★ 8.5</span></div></article>
+        <article class="movie-card" data-title="Weekend Plan" data-genre="Comedy" data-year="2025"><div class="movie-poster art-twelve"><span class="art-title">WEEKEND<br>PLAN</span><span class="art-foot">EXPECT THE UNEXPECTED</span></div><div class="movie-info"><div><h3>Weekend Plan</h3><p>Comedy · 2025</p></div><span class="rating">★ 7.4</span></div></article>
+      </div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No movies found</h3><p>Try another title or choose a different genre.</p><button id="resetFilters">Reset filters</button></div>
+      <div class="load-more-wrap"><button class="load-more" id="loadMore">You're all caught up <span>✓</span></button></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer"><div class="footer-inner"><a class="brand" href="#"><span class="brand-mark">123</span><span>moviies<span class="brand-dot">.</span></span></a><p>Your destination for discovering movies and stories worth watching.</p><span class="copyright">© 2026 123moviies. All rights reserved.</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
